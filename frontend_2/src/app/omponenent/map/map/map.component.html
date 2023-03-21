@@ -1,0 +1,33 @@
+<div class="container">
+    <agm-map
+
+       [latitude]='lat'
+
+       [longitude]='long'
+
+       [zoom]='zoom'
+
+       >
+        <agm-marker
+
+            *ngFor="let item of markers"
+
+            [latitude]="item.lat"
+
+              [longitude]="item.lng">
+
+                  <agm-info-window #infoWindow>
+
+                      {{ item.label }}
+
+                </agm-info-window>
+
+        </agm-marker>
+
+
+
+    </agm-map>
+
+
+
+</div>
